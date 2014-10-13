@@ -1,0 +1,9 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.waverim.sherlock.Signin" >
+
+    <item android:id="@+id/action_login_register"
+          android:icon="@drawable/ic_action_person"
+          android:title="@string/action_to_register"
+          android:showAsAction="ifRoom" />
+</menu>
