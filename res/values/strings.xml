@@ -6,7 +6,8 @@
     <string name="sign_in">登录</string>
     <string name="title_activity_share_loc">位置分享</string>
     <string name="title_activity_register">注册</string>
-    <string name="action_to_register">to注册</string>
-    <string name="action_to_login">to登录</string>
+    <string name="action_login_register">登陆注册切换</string>
+    <string name="title_activity_map">Map</string>
+    <string name="hello_world">Hello world!</string>
 
 </resources>

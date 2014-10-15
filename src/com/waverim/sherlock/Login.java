@@ -56,17 +56,17 @@ public class Login extends Activity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
     	switch (item.getItemId()) {
-    	case R.id.action_login_register:
-    		if (frag_state == 0) {
-    			fragmentManager.beginTransaction().replace(R.id.content_frame, register_fragment).commit();
-    			frag_state = 1;
-    		} else if (frag_state == 1) {
-    			fragmentManager.beginTransaction().replace(R.id.content_frame, login_fragment).commit();
-    			frag_state = 0;
-    		}
-    		return true;
-        default:
-            return super.onOptionsItemSelected(item);
+	    	case R.id.action_login_register:
+	    		if (frag_state == 0) {
+	    			fragmentManager.beginTransaction().replace(R.id.content_frame, register_fragment).commit();
+	    			frag_state = 1;
+	    		} else if (frag_state == 1) {
+	    			fragmentManager.beginTransaction().replace(R.id.content_frame, login_fragment).commit();
+	    			frag_state = 0;
+	    		}
+	    		return true;
+	        default:
+	            return super.onOptionsItemSelected(item);
     	}
     }
     
@@ -81,6 +81,10 @@ public class Login extends Activity {
 	  			@Override
 	  			public void onClick(View v) {
 	  				new signinClick().execute();
+	  				
+	  				Intent intent = new Intent(getActivity(), ShareLoc.class);
+	  				startActivity(intent);
+	  				getActivity().finish();
 	  			}
           	
             });
@@ -99,7 +103,8 @@ public class Login extends Activity {
     private static class signinClick extends AsyncTask<String, Void, String> {
 		protected String doInBackground(String...arg0) {
 			HttpClient httpclient = new DefaultHttpClient();
-			String uri = baseUrl + "/Service.svc/User/Logon?username=aaa&password=bbb";
+//			String uri = baseUrl + "Service.svc/User/Logon?username=aaa&password=bbb";
+			String uri = baseUrl + "Service.svc/aa?a=333";
 			HttpGet request = new HttpGet(uri);
 			Log.i("request", request.getURI().toString());
 			String result = null;
@@ -110,6 +115,7 @@ public class Login extends Activity {
 			}catch(Exception e){
 				Log.e("orderlist", "Error in http connection "+e.toString());
 			}
+			
 			return result;
 		}
 		
