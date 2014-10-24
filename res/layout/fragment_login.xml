@@ -7,15 +7,18 @@
     android:orientation="vertical" >
     
     <EditText 
+        android:id="@+id/login_username"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:hint="用户名"/>
     
-    <EditText 
+    <EditText
+        android:id="@+id/login_password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
+        android:inputType="textPassword"
         android:hint="密码"/>
     
     <Button 

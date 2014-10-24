@@ -18,6 +18,7 @@
         android:text="分享一次"/>
     
     <Button 
+        android:id="@+id/btn_share_more"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
@@ -27,4 +28,16 @@
         android:background="#ff8800"
         android:textColor="#fff"
         android:text="连续分享"/>
+    
+    <Button
+        android:id="@+id/btn_map"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_gravity="center"
+        android:paddingLeft="48dp"
+        android:paddingRight="48dp"
+        android:background="#aa66cc"
+        android:textColor="#fff"
+        android:text="好友地图"/>
 </LinearLayout>
